@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.jfxgg.AppController">
+   <top>
+      <AnchorPane prefHeight="330.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="438.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleSave" text="Save" />
+            <ImageView fitHeight="214.0" fitWidth="150.0" layoutX="14.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/goglobal_logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="179.0" layoutY="14.0" prefHeight="275.0" prefWidth="407.0">
+               <children>
+                  <Label fx:id="lbFileExecutable" layoutY="6.0" text="Go-Global client executable*" />
+                  <TextField fx:id="tfFileExecutable" editable="false" layoutY="25.0" prefHeight="25.0" prefWidth="374.0" />
+                  <Button layoutX="381.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleChooseExecutable" text="..." />
+                  <Label fx:id="lbHost" layoutY="59.0" text="Host*" />
+                  <TextField fx:id="tfHost" layoutY="78.0" prefHeight="25.0" prefWidth="404.0" />
+                  <Label fx:id="lbUsername" layoutY="113.0" text="Username*" />
+                  <TextField fx:id="tfUsername" layoutY="132.0" />
+                  <Label fx:id="lbPass" layoutY="166.0" text="Password" />
+                  <PasswordField fx:id="pfPass" layoutY="185.0" />
+                  <Label layoutY="220.0" text="Default app name" />
+                  <TextField fx:id="tfDefaultApp" layoutX="-1.0" layoutY="240.0" prefHeight="25.0" prefWidth="404.0" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="488.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleCreateShortcut" text="Create shortcut" />
+            <Label fx:id="lbStatus" layoutX="179.0" layoutY="293.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
